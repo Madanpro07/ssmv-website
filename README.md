@@ -1,6 +1,6 @@
 # SSMV Consultant And Land Surveyors website
 
-A responsive bilingual (English/Kannada) React + TypeScript + Vite website for SSMV Consultant And Land Surveyors. The contact form prepares a WhatsApp message; this version intentionally has no database, no admin login, and does not store enquiry data.
+A responsive bilingual (English/Kannada) React + TypeScript + Vite website for SSMV Consultant And Land Surveyors. The contact form prepares a WhatsApp message; this version intentionally has no database, no admin login, and does not store enquiry data. The construction gallery includes an automatic slideshow with previous/next, play/pause, thumbnail, keyboard and lightbox controls.
 
 ## Requirements
 - Node.js 20.19+ or 22.12+ (Node 22 LTS recommended)
@@ -10,13 +10,13 @@ A responsive bilingual (English/Kannada) React + TypeScript + Vite website for S
 1. Install Node.js from https://nodejs.org/ if you do not already have it.
 2. Extract this ZIP to a folder.
 3. Open a terminal/command prompt in the `ssmv-website` folder.
-4. Run `npm install`.
+4. Run `npm install` to download the project dependencies.
 5. Run `npm run dev`.
 6. Open the local URL printed in the terminal (usually http://localhost:5173).
 7. To stop the local server, return to the terminal and press Ctrl+C.
 
-## Production build
-Run `npm run build`. The production website is generated in `dist/`. To preview it locally, run `npm run preview`.
+## Project checks and production build
+Run `npm run typecheck` to check TypeScript, then run `npm run build` to produce the production website. The production website is generated in `dist/`. To preview it locally, run `npm run preview`.
 
 ## Free deployment with Cloudflare Pages
 1. Create/sign in to GitHub and create a new repository named `ssmv-website`.
@@ -30,18 +30,18 @@ Run `npm run build`. The production website is generated in `dist/`. To preview 
 
 Official guides:
 - Vite: https://vite.dev/guide/
-- Cloudflare Pages + Vite: https://developers.cloudflare.com/pages/framework-guides/deploy-a-vite3-project/
+- Cloudflare Pages + React: https://developers.cloudflare.com/pages/framework-guides/deploy-a-react-site/
 
 ## Business details
 Business name: SSMV Consultant And Land Surveyors
 Phone/WhatsApp: +91 9480112556
 Address: SRK Nagar-1, Talur Road, opposite Balabharathi Kendria Vidyalaya, Ballari, Karnataka 583103, India
 
-Edit `src/App.tsx` for text and business details. Contact values are centralized at the top of that file. Edit `src/styles.css` to change design colours and layout. Replace illustrative images with genuine business images when available.
+Edit `src/App.tsx` for text and business details. Contact values are centralized at the top of that file. Edit `src/styles.css` to change design colours and layout. The six user-provided construction photos are included as optimized local WebP files under `public/images/`; the showcase is not dependent on a third-party photo host. Other reference images are illustrative and use external image URLs with a local placeholder fallback.
 
 ## Before launch
 - Review Kannada translations with a fluent Kannada reviewer.
-- Verify all images and replace illustrative photos with genuine business photographs where available.
+- Verify external illustrative images with an internet connection; replace them with genuine business photographs when available. The six construction carousel images are locally stored and should load without third-party photo hosting.
 - Test the WhatsApp flow on a phone with WhatsApp installed.
 - Confirm the address and Google Maps directions open the correct place.
 - Add the final public website URL to the existing Google Business Profile yourself; this project does not change your Google listing.
